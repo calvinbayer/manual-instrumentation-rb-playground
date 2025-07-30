@@ -30,17 +30,18 @@ bundle exec rake
 
 ## Datadog Test Optimization
 
-This project is instrumented with Datadog's Test Optimization library. To enable full functionality:
+This project is instrumented with Datadog's Test Optimization library using the `datadog-ci` gem. The gem is configured through environment variables.
 
-1. Set up your Datadog API credentials:
-   - `DD_API_KEY`: Your Datadog API key
-   - `DD_APP_KEY`: Your Datadog Application key
-   - `DD_SITE`: Your Datadog site (default: datadoghq.com)
+### Required Environment Variables for CI:
+- `DD_API_KEY`: Your Datadog API key
+- `DD_SITE`: Your Datadog site (default: datadoghq.com)
 
-2. Environment variables for CI:
-   - `DD_ENV`: Environment name (e.g., 'ci', 'test')
-   - `DD_SERVICE`: Service name (default: 'ruby-test-project')
-   - `DD_VERSION`: Version/commit SHA
+### Optional Environment Variables:
+- `DD_APP_KEY`: Your Datadog Application key (for some advanced features)
+- `DD_ENV`: Environment name (default: 'test' for tests, 'ci' recommended for CI)
+- `DD_SERVICE`: Service name (default: 'ruby-test-project')
+- `DD_VERSION`: Version/commit SHA
+- `DD_CIVISIBILITY_ENABLED`: Enable CI Visibility (default: 'true')
 
 ## CI/CD
 

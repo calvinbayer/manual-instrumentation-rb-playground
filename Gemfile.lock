@@ -1,0 +1,50 @@
+GEM
+  remote: https://rubygems.org/
+  specs:
+    datadog (2.19.0)
+      datadog-ruby_core_source (~> 3.4, >= 3.4.1)
+      libdatadog (~> 18.1.0.1.0)
+      libddwaf (~> 1.24.1.0.3)
+      logger
+      msgpack
+    datadog-ci (1.17.0)
+      datadog (~> 2.4)
+      drb
+      msgpack
+    datadog-ruby_core_source (3.4.1)
+    diff-lcs (1.6.2)
+    drb (2.2.3)
+    ffi (1.17.2-arm64-darwin)
+    libdatadog (18.1.0.1.0)
+    libddwaf (1.24.1.0.3-arm64-darwin)
+      ffi (~> 1.0)
+    logger (1.7.0)
+    msgpack (1.8.0)
+    rake (13.3.0)
+    rspec (3.13.0)
+      rspec-core (~> 3.13.0)
+      rspec-expectations (~> 3.13.0)
+      rspec-mocks (~> 3.13.0)
+    rspec-core (3.13.5)
+      rspec-support (~> 3.13.0)
+    rspec-expectations (3.13.5)
+      diff-lcs (>= 1.2.0, < 2.0)
+      rspec-support (~> 3.13.0)
+    rspec-mocks (3.13.5)
+      diff-lcs (>= 1.2.0, < 2.0)
+      rspec-support (~> 3.13.0)
+    rspec-support (3.13.4)
+
+PLATFORMS
+  arm64-darwin-24
+
+DEPENDENCIES
+  datadog-ci (~> 1.17.0)
+  rake
+  rspec (= 3.13.0)
+
+RUBY VERSION
+   ruby 3.2.5p208
+
+BUNDLED WITH
+   2.4.19

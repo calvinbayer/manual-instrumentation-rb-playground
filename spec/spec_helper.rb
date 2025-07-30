@@ -1,16 +1,13 @@
 require 'datadog/ci'
 
 # Configure Datadog Test Optimization
-Datadog::CI.configure do |c|
-  # Enable test optimization
-  c.enabled = true
-  
-  # Service name for your tests
-  c.service = 'ruby-test-project'
-  
-  # Environment (will be overridden by DD_ENV if set)
-  c.env = ENV.fetch('DD_ENV', 'test')
-end
+# The datadog-ci gem is configured primarily through environment variables.
+# Set defaults if not already configured via environment variables.
+ENV['DD_SERVICE'] ||= 'ruby-test-project'
+ENV['DD_ENV'] ||= 'test'
+
+# Enable Datadog CI Visibility
+ENV['DD_CIVISIBILITY_ENABLED'] ||= 'true'
 
 RSpec.configure do |config|
   # Use only the new expect syntax
