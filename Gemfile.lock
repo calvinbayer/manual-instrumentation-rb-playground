@@ -15,8 +15,12 @@ GEM
     diff-lcs (1.6.2)
     drb (2.2.3)
     ffi (1.17.2-arm64-darwin)
+    ffi (1.17.2-x86_64-linux-gnu)
     libdatadog (18.1.0.1.0)
+    libdatadog (18.1.0.1.0-x86_64-linux)
     libddwaf (1.24.1.0.3-arm64-darwin)
+      ffi (~> 1.0)
+    libddwaf (1.24.1.0.3-x86_64-linux)
       ffi (~> 1.0)
     logger (1.7.0)
     msgpack (1.8.0)
@@ -37,6 +41,7 @@ GEM
 
 PLATFORMS
   arm64-darwin-24
+  x86_64-linux
 
 DEPENDENCIES
   datadog-ci (~> 1.17.0)
