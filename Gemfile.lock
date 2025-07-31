@@ -1,6 +1,7 @@
 GEM
   remote: https://rubygems.org/
   specs:
+    builder (3.3.0)
     datadog (2.19.0)
       datadog-ruby_core_source (~> 3.4, >= 3.4.1)
       libdatadog (~> 18.1.0.1.0)
@@ -38,8 +39,9 @@ GEM
       diff-lcs (>= 1.2.0, < 2.0)
       rspec-support (~> 3.13.0)
     rspec-support (3.13.4)
-    rspec_junit_formatter (0.6.0)
-      rspec-core (>= 2, < 4, != 2.12.0)
+    yarjuf (2.0.0)
+      builder
+      rspec (~> 3)
 
 PLATFORMS
   arm64-darwin-24
@@ -49,7 +51,7 @@ DEPENDENCIES
   datadog-ci (~> 1.17.0)
   rake
   rspec (= 3.13.0)
-  rspec_junit_formatter
+  yarjuf
 
 RUBY VERSION
    ruby 3.2.5p208
