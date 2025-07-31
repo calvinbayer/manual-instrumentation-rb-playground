@@ -7,4 +7,5 @@ gem 'datadog-ci', '~> 1.17.0'
 
 group :development, :test do
   gem 'rake'
+  gem 'rspec_junit_formatter'
 end 
