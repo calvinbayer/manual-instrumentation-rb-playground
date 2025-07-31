@@ -35,4 +35,4 @@ jobs:
         DD_API_KEY: ${{secrets.DD_API_KEY}}
         DD_SITE: datadoghq.com
         RUBYOPT: "-rbundler/setup -rdatadog/ci/auto_instrument"
-      run: bundle exec rspec
+      run: bundle exec rspec --no-color -r yarjuf --format JUnit --out /tmp/rspec.xml
