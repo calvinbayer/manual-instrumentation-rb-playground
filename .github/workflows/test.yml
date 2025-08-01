@@ -17,7 +17,14 @@ jobs:
       run: uname -r
 
     - name: Build Docker image
-      run: docker build -t ruby-test-project .
+      run: docker build --progress=plain --no-cache -t ruby-test-project .
+
+    - name: Verify Docker image
+      run: |
+        echo "Verifying Docker image details..."
+        docker images ruby-test-project
+        echo "Checking that git is not installed in container..."
+        docker run --rm ruby-test-project sh -c "git --version || echo 'git is not installed (as expected)'"
 
     - name: Create test results directory
       run: mkdir -p test-results
