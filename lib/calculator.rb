@@ -1,5 +1,6 @@
 class Calculator
   def add(a, b)
+    puts "Adding #{a} and #{b}"
     a + b
   end
 
