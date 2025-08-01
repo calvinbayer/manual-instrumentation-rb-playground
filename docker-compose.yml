@@ -14,6 +14,7 @@ services:
       - DD_SERVICE=ruby-test-project
       - DD_ENV=test
       - DD_SITE=datadoghq.com
+      - RUBYOPT="-rbundler/setup -rdatadog/ci/auto_instrument"
     # Default command runs JUnit XML output
     command: bundle exec rspec --no-color -r yarjuf --format JUnit --out /tmp/rspec.xml
 
