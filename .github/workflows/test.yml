@@ -40,6 +40,7 @@ jobs:
           -e DD_SITE=datadoghq.com \
           -e RUBYOPT="-rbundler/setup -rdatadog/ci/auto_instrument" \
           -e DD_CIVISIBILITY_AGENTLESS_ENABLED=true \
+          -e GITHUB_SHA \
           ruby-test-project
 
     - name: Upload test results
