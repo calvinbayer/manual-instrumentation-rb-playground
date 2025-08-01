@@ -15,10 +15,14 @@ GEM
     datadog-ruby_core_source (3.4.1)
     diff-lcs (1.6.2)
     drb (2.2.3)
+    ffi (1.17.2-aarch64-linux-musl)
     ffi (1.17.2-arm64-darwin)
     ffi (1.17.2-x86_64-linux-gnu)
     libdatadog (18.1.0.1.0)
+    libdatadog (18.1.0.1.0-aarch64-linux)
     libdatadog (18.1.0.1.0-x86_64-linux)
+    libddwaf (1.24.1.0.3-aarch64-linux)
+      ffi (~> 1.0)
     libddwaf (1.24.1.0.3-arm64-darwin)
       ffi (~> 1.0)
     libddwaf (1.24.1.0.3-x86_64-linux)
@@ -44,6 +48,7 @@ GEM
       rspec (~> 3)
 
 PLATFORMS
+  aarch64-linux-musl
   arm64-darwin-24
   x86_64-linux
 

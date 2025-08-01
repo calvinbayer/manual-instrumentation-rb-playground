@@ -1,0 +1,29 @@
+version: '3.8'
+
+services:
+  test:
+    build: .
+    volumes:
+      # Mount test results to host
+      - ./test-results:/tmp
+    environment:
+      # Datadog Test Optimization environment variables
+      # Only DD_API_KEY should be passed from host environment
+      - DD_API_KEY=${DD_API_KEY}
+      - DD_CIVISIBILITY_ENABLED=true
+      - DD_SERVICE=ruby-test-project
+      - DD_ENV=test
+      - DD_SITE=datadoghq.com
+    # Default command runs JUnit XML output
+    command: bundle exec rspec --no-color -r yarjuf --format JUnit --out /tmp/rspec.xml
+
+  # Alternative service for running tests with documentation format
+  test-docs:
+    build: .
+    volumes:
+      - ./test-results:/tmp
+    environment:
+      - DD_CIVISIBILITY_ENABLED=true
+      - DD_SERVICE=ruby-test-project
+      - DD_ENV=test
+    command: bundle exec rspec --format documentation 

@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites errors="0" failures="0" skipped="0" tests="14" time="0.001360542" timestamp="2025-08-01T15:34:19+00:00">
+  <testsuite name="#add" tests="3" errors="0" failures="0" skipped="0">
+    <properties/>
+    <testcase name="Calculator#add adds two positive numbers" time="0.000152917">
+    </testcase>
+    <testcase name="Calculator#add adds positive and negative numbers" time="2.5333e-05">
+    </testcase>
+    <testcase name="Calculator#add adds two negative numbers" time="2.1959e-05">
+    </testcase>
+  </testsuite>
+  <testsuite name="#subtract" tests="3" errors="0" failures="0" skipped="0">
+    <properties/>
+    <testcase name="Calculator#subtract subtracts two positive numbers" time="2.0208e-05">
+    </testcase>
+    <testcase name="Calculator#subtract subtracts negative from positive" time="2.0333e-05">
+    </testcase>
+    <testcase name="Calculator#subtract subtracts positive from negative" time="1.7875e-05">
+    </testcase>
+  </testsuite>
+  <testsuite name="#multiply" tests="4" errors="0" failures="0" skipped="0">
+    <properties/>
+    <testcase name="Calculator#multiply multiplies two positive numbers" time="1.9875e-05">
+    </testcase>
+    <testcase name="Calculator#multiply multiplies by zero" time="2.4542e-05">
+    </testcase>
+    <testcase name="Calculator#multiply multiplies negative numbers" time="4.9458e-05">
+    </testcase>
+    <testcase name="Calculator#multiply multiplies positive and negative" time="1.7375e-05">
+    </testcase>
+  </testsuite>
+  <testsuite name="#divide" tests="4" errors="0" failures="0" skipped="0">
+    <properties/>
+    <testcase name="Calculator#divide divides two positive numbers" time="1.8792e-05">
+    </testcase>
+    <testcase name="Calculator#divide divides negative numbers" time="1.7333e-05">
+    </testcase>
+    <testcase name="Calculator#divide divides positive by negative" time="1.6667e-05">
+    </testcase>
+    <testcase name="Calculator#divide raises error when dividing by zero" time="0.000376417">
+    </testcase>
+  </testsuite>
+</testsuites>
